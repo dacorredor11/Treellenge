@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'challenges',
     loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
+  },  {
+    path: 'check-my-tree',
+    loadChildren: () => import('./check-my-tree/check-my-tree.module').then( m => m.CheckMyTreePageModule)
   },
+
 ];
 
 @NgModule({
