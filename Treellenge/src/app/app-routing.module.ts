@@ -8,13 +8,14 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'check-my-tree',
     pathMatch: 'full'
   },
   {
     path: 'challenges',
     loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
-  },  {
+  },
+  {
     path: 'check-my-tree',
     loadChildren: () => import('./check-my-tree/check-my-tree.module').then( m => m.CheckMyTreePageModule)
   },

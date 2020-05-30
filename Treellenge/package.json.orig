@@ -25,6 +25,7 @@
     "@ionic-native/core": "^5.26.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/sqlite": "^5.26.0",
+    "@ionic-native/sqlite-porter": "^5.26.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "cordova-android": "^8.1.0",
@@ -33,6 +34,7 @@
     "cordova-sqlite-storage": "^5.0.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -69,6 +71,7 @@
   "cordova": {
     "plugins": {
       "cordova-sqlite-storage": {},
+<<<<<<< HEAD
       "cordova-plugin-camera-preview": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-whitelist": {},
@@ -83,5 +86,9 @@
     "platforms": [
       "android"
     ]
+=======
+      "uk.co.workingedge.cordova.plugin.sqliteporter": {}
+    }
+>>>>>>> f3ea68c7f30442b2096ad672c8e80e4ad96acae7
   }
 }

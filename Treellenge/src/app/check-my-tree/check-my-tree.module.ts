@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CheckMyTreePageRoutingModule } from './check-my-tree-routing.module';
 
 import { CheckMyTreePage } from './check-my-tree.page';
-import { Camera } from '@ionic-native/camera/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
