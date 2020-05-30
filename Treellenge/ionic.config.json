@@ -1,0 +1,7 @@
+{
+  "name": "Treellenge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
