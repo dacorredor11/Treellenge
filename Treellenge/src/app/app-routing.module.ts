@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'challenges',
     loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
   },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },
 ];
 
 @NgModule({
