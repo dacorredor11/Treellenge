@@ -1,29 +1,27 @@
+<ion-header-bar class="bar-positive">
+  <ion-item color="success - shade">
+    <div *ngIf="validation">
+      <ion-avatar slot="start">
+        
+        <!-- <ion-img [src]="userData[0].photoUrl"></ion-img> -->
+        <!-- <ion-text>{{userData}}</ion-text> -->
+      </ion-avatar>
+    </div>
+    <div *ngIf="!validation">
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+    </div> 
+    <ion-label>
+      <ion-label>
+        <ion-title style="text-align: center;">Score</ion-title>
+      </ion-label>
+      <ion-progress-bar value="0.5" color="secondary" style="margin-top: 10px;"></ion-progress-bar>
+    </ion-label>
+  </ion-item>
+</ion-header-bar>
 <ion-content>
   <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-item color="success - shade">
-          <div *ngIf="validation">
-            <ion-avatar slot="start">
-              
-              <!-- <ion-img [src]="userData[0].photoUrl"></ion-img> -->
-              <!-- <ion-text>{{userData}}</ion-text> -->
-            </ion-avatar>
-          </div>
-          <div *ngIf="!validation">
-            <ion-avatar slot="start">
-              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-            </ion-avatar>
-          </div> 
-          <ion-label>
-            <ion-label>
-              <ion-title style="text-align: center;">Score</ion-title>
-            </ion-label>
-            <ion-progress-bar value="0.5" color="secondary" style="margin-top: 10px;"></ion-progress-bar>
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
     <ion-row>
       <ion-toolbar>
         <h2>Treellenges</h2>
