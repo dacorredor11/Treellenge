@@ -12,5 +12,27 @@
         </ion-item>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-slides>
+        <ion-slide *ngFor="let val of data">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val.titulo}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val.imgURL"></ion-img>
+                <ion-text>
+                  <p>
+                    {{val.description}}
+                  </p>
+                </ion-text>
+                <ion-button expand="full">Accept donation</ion-button>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
   </ion-grid>
 </ion-content>

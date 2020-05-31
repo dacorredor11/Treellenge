@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DonationsService } from './donations.service';
 
 @Component({
   selector: 'app-donations',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationsPage implements OnInit {
 
-  constructor() { }
+  data = [];
+
+  constructor(private donationsService: DonationsService ) { }
 
   ngOnInit() {
+    this.data = this.donationsService.getData();
   }
-
 }
