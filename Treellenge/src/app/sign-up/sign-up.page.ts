@@ -13,15 +13,15 @@ export class SignUpPage implements OnInit {
   slides = [
     {
       img: '../../assets/img/nature_on_screen.svg',
-      title: 'Lets change the world<br>through our phone!'
+      title: `Lets change the world<br>through our phone`
     },
     {
-      img: '../../assets/img/world_is_mine.svg',
-      title: 'Share incredible echological<br>experiences with others'
+      img: '../../assets/img/stand_out.svg',
+      title: `Share incredible echological<br>experiences with others`
     },
     {
-      img: 'assets/img/nature_on_screen.svg',
-      title: 'Lets change the world<br>through our phone'
+      img: '../../assets/img/online_article.svg',
+      title: `Lets change the world<br>through our phone`
     }
   ];
 

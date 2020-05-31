@@ -9,22 +9,22 @@
         <img [src]="slide.img">
       </div>
       <div>
-        <h3>{{ slide.title }}</h3>
+        <h3 [innerHTML]="slide.title"></h3>
       </div>
 
     </ion-slide>
 
     <ion-slide>
-      <ion-row style="margin-top: 30%;">
+      <ion-row style="margin-top: 35%;">
         <ion-col>
-          <img src="../../assets/img/logosvg.svg" height="300px" class="treellenge-icon">
+          <img src="../../assets/img/logo_Verde.svg" height="300px" class="treellenge-icon">
         </ion-col>
       </ion-row>
     </ion-slide>
 
   </ion-slides>
 </ion-content>
-<ion-footer class="ion-no-border">
+<ion-footer no-border class="ion-no-border">
   <ion-grid fixed>
     <form>
       <ion-row>
