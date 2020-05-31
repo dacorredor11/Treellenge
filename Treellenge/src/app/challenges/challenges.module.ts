@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ChallengesPageRoutingModule } from './challenges-routing.module';
 
 import { ChallengesPage } from './challenges.page';
+import { FooterComponent } from '../component/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ChallengesPage } from './challenges.page';
     IonicModule,
     ChallengesPageRoutingModule
   ],
-  declarations: [ChallengesPage]
+  declarations: [ChallengesPage, FooterComponent]
 })
 export class ChallengesPageModule {}

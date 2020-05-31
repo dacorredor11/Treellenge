@@ -1,26 +1,49 @@
 <ion-header>
-  <ion-avatar>
-    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
+  <ion-toolbar>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <h1>Treellengues</h1>
-
-  <ion-segment scrollable>
-    <img src="assets/img/Clas_residuos.png">
-    <img src="assets/img/Innova.png">
-    <img src="assets/img/Plogging.jpg">
-  </ion-segment>
-
-  <h1>Treetips</h1>
-
-  <ion-segment scrollable>
-    <img src="assets/img/News.png">
-    <img src="assets/img/Tips.png">
-    <img src="assets/img/Events.png">
-  </ion-segment>
+<ion-content [fullscreen]="true" style="overflow: scroll;">
+  <div id="Challenges">
+    <BR>
+    <ion-toolbar>
+      <ion-title size="large" style="text-align: left;">Treellenges</ion-title>
+    </ion-toolbar>
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+    </ion-slides>
+    <BR>
+  </div>
+  <div id="Treetips">
+    <ion-toolbar>
+      <ion-title size="large" style="text-align: left;">Treetips</ion-title>
+    </ion-toolbar>
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>
 
 <app-footer> </app-footer>
