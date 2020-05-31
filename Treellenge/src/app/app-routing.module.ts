@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'check-my-tree',
+    redirectTo: 'daily-challenge',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'check-my-tree',
     loadChildren: () => import('./check-my-tree/check-my-tree.module').then( m => m.CheckMyTreePageModule)
+  },
+  {
+    path: 'daily-challenge',
+    loadChildren: () => import('./daily-challenge/daily-challenge.module').then( m => m.DailyChallengePageModule)
   },
 
 ];

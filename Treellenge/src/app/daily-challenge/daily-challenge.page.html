@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Make a plant famous</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="reload()"><ion-icon name="reload" slot="icon-only"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of items">
+    <img [src]="'data:image/png;base64,' + item.imageData"/>
+    <h4>Object detected: {{ item.results[0].labelAnnotations[0].description }}</h4>
+    <button *ngIf="good_job"
+    color="secondary"ion-button full>
+    Congrats you won points!
+    </button>
+    <button *ngIf="!good_job"
+        color="danger"ion-button full>
+    Sorry! this is not a plant
+    </button>
+  </ion-card>
+
+  <ion-button (click)="takePhoto()" expand="block">
+    <ion-icon name="camera"></ion-icon>
+  </ion-button>
+
+</ion-content>
+
