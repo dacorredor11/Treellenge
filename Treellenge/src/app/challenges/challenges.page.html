@@ -3,8 +3,18 @@
     <ion-title class="ion-text-center" size="large">challenges</ion-title>
   </ion-toolbar>
 </ion-header>
- 
-<ion-content>
-  <img src="https://www.turismonuevayork.com/wp-content/uploads/2014/09/La-Estatua-de-la-Libertad-en-Nueva-York-760x500.jpg" alt="">
-</ion-content>
+<ion-list>
+  <ion-item>
+  <ion-avatar slot="start">
+    <img src="../assets/img/reto1s.svg">
+  </ion-avatar>
+  <ion-label [routerLink]="['/daily-challenge']" class="ion-text-center">Daily Challenge</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="../assets/img/reto2s.svg">
+    </ion-avatar>
+    <ion-label [routerLink]="['/check-my-tree']" class="ion-text-center">Check My Tree</ion-label>
+    </ion-item>
+</ion-list>
 <app-footer></app-footer>
