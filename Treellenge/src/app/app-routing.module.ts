@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'users',
+    redirectTo: 'sign-up',
     pathMatch: 'full'
   },
   {
@@ -16,13 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
   },
   {
-    path: 'users',
-    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
-  },
-  {
     path: 'sign-up',
     loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
   },
+  {
+    path: 'donations',
+    loadChildren: () => import('./donations/donations.module').then( m => m.DonationsPageModule)
+  },
+
 
 ];
 

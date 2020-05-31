@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
+import { DonationsPageRoutingModule } from './donations-routing.module';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { DonationsPage } from './donations.page';
 import { FooterComponent } from '../component/footer/footer.component';
 
 @NgModule({
@@ -13,9 +14,8 @@ import { FooterComponent } from '../component/footer/footer.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    ReactiveFormsModule,
-    HomePageRoutingModule
+    DonationsPageRoutingModule
   ],
-  declarations: [HomePage, FooterComponent]
+  declarations: [DonationsPage, FooterComponent]
 })
-export class HomePageModule {}
+export class DonationsPageModule {}
