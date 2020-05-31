@@ -1,5 +1,10 @@
 ion-content{
-  --ion-background-color:grey;
+  --ion-background-color:#f8fcfb!important;
+}
+
+ion-footer{
+  --ion-background-color:#f8fcfb!important;
+  background-color: #f8fcfb!important;
 }
 
 .treellenge-icon{
@@ -12,6 +17,7 @@ display: block;
 ion-slide {
 display: block;
 color: black;
+--ion-background-color:#f8fcfb;
 }
 
 .slide-img-padding {
@@ -21,5 +27,9 @@ padding: 35px;
 h3 {
 font-size: 30px;
 font-weight: lighter;
-margin-bottom: 60px;
+margin-bottom: 40px;
+}
+
+.centrado{
+  text-align: center;
 }
