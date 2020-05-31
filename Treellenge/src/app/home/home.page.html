@@ -17,14 +17,14 @@
     </ion-row>
     <ion-row>
       <ion-toolbar>
-        <ion-title size="large" style="text-align: left;">Treellenges</ion-title>
+        <h2>Treellenges</h2>
       </ion-toolbar>
-      <ion-slides>
+      <ion-slides pager="true">
         <ion-slide *ngFor="let val of data">
           <ion-card>
             <ion-card-header>
               <ion-card-title>
-                {{val.titulo}}
+                {{val.title}}
               </ion-card-title>
               <ion-card-content>
                 <ion-img [src]="val.imgURL"></ion-img>
@@ -41,17 +41,17 @@
     </ion-row>
     <ion-row>
       <ion-toolbar>
-        <ion-title size="large" style="text-align: left;">Treetips</ion-title>
+        <h2>Treetips</h2>
       </ion-toolbar>
-      <ion-slides>
-        <ion-slide *ngFor="let val of data1">
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val1 of data1">
           <ion-card>
             <ion-card-header>
               <ion-card-title>
-                {{val.titulo}}
+                {{val1.title}}
               </ion-card-title>
               <ion-card-content>
-                <ion-img [src]="val.imgURL" style="width: 150px;"></ion-img>
+                <ion-img [src]="val1.imgURL"></ion-img>
               </ion-card-content>
             </ion-card-header>
           </ion-card>
