@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <h2>Hello, User</h2>
+    </ion-row>
+    
+    <ion-row>
+      <ion-button type="submit" (click)="authService.SignOut()" expand="block">Logout</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

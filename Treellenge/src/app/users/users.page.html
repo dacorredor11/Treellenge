@@ -5,5 +5,44 @@
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="mainForm" (ngSubmit)="storeData()">
+    <ion-item>
+      <ion-label position="floating">User name</ion-label>
+      <ion-input formControlName="user_name" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Id persona</ion-label>
+      <ion-input formControlName="person_id" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">image</ion-label>
+      <ion-input formControlName="image" type="text" required>
+      </ion-input>
+    </ion-item>
 
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">
+          Create account
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-list-header>
+    Songs
+  </ion-list-header>
+
+  <ion-item lines="inset" *ngFor="let data of Data">
+    <ion-label>
+      <h5>{{data.user_name}}</h5>
+      <p>{{data.person_id}}</p>
+    </ion-label>
+
+    <div class="item-note" item-end>
+      <ion-icon name="create" style="zoom:2.0" [routerLink]="['/user/', data.id]"></ion-icon>
+      <ion-icon name="trash" style="zoom:2.0" (click)="deleteSong(data.id)"></ion-icon>
+    </div>
+  </ion-item>
 </ion-content>
