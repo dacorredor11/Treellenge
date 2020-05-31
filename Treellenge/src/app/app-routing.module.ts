@@ -8,12 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'check-my-tree',
+    redirectTo: 'sign-up',
     pathMatch: 'full'
   },
   {
     path: 'challenges',
     loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'donations',
+    loadChildren: () => import('./donations/donations.module').then( m => m.DonationsPageModule)
   },
   {
     path: 'check-my-tree',

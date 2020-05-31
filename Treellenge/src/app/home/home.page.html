@@ -1,20 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item color="success - shade">
+          <ion-avatar slot="start">
+            <ion-img src="https://content.api.news/v3/images/bin/a6923adbc7bece73803221613f410782"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <ion-label>
+              <ion-title style="text-align: center;">Score</ion-title>
+            </ion-label>
+            <ion-progress-bar value="0.5" color="secondary" style="margin-top: 10px;"></ion-progress-bar>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-toolbar>
+        <h2>Treellenges</h2>
+      </ion-toolbar>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val of data">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val.imgURL"></ion-img>
+                <ion-text>
+                  <p>
+                    {{val.description}}
+                  </p>
+                </ion-text>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row>
+      <ion-toolbar>
+        <h2>Treetips</h2>
+      </ion-toolbar>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val1 of data1">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val1.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val1.imgURL"></ion-img>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

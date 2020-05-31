@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ChallengesPageRoutingModule } from './challenges-routing.module';
+import { DonationsPageRoutingModule } from './donations-routing.module';
 
-import { ChallengesPage } from './challenges.page';
+import { DonationsPage } from './donations.page';
 import { FooterComponent } from '../component/footer/footer.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { FooterComponent } from '../component/footer/footer.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    ChallengesPageRoutingModule
+    DonationsPageRoutingModule
   ],
-  declarations: [ChallengesPage, FooterComponent]
+  declarations: [DonationsPage, FooterComponent]
 })
-export class ChallengesPageModule {}
+export class DonationsPageModule {}

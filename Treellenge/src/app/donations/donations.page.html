@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-avatar>
+            <ion-img src="https://content.api.news/v3/images/bin/a6923adbc7bece73803221613f410782"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <ion-button expand="block" shape="round" style="margin-left: 32px; margin-right: 32px;" color="success - shade">DONATE</ion-button>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-slides>
+        <ion-slide *ngFor="let val of data">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val.titulo}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val.imgURL"></ion-img>
+                <ion-text>
+                  <p>
+                    {{val.description}}
+                  </p>
+                </ion-text>
+                <ion-button expand="full" color="success - shade">Accept donation</ion-button>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
+</ion-content>
