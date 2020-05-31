@@ -1,52 +1,75 @@
-<ion-header>
-  <ion-toolbar color="success - shade">
-    <ion-avatar slot="start">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
-    
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" style="overflow: scroll;">
-  <div id="Challenges">
-    <BR>
-    <ion-toolbar>
-      <ion-title size="large" style="text-align: left;">Treellenges</ion-title>
-    </ion-toolbar>
-    <ion-slides pager="true">
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-    </ion-slides>
-    <BR>
-  </div>
-  <div id="Treetips">
-    <ion-toolbar>
-      <ion-title size="large" style="text-align: left;">Treetips</ion-title>
-    </ion-toolbar>
-    <ion-slides pager="true">
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-      <ion-slide>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnPlxVLj4lfinmQqoWJORD4wS2oNlm-T2kwerGAjd-21E43HhG&usqp=CAU">
-      </ion-slide>
-    </ion-slides>
-  </div>
-  <app-footer></app-footer>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item color="success - shade">
+          <div *ngIf="validation">
+            <ion-avatar slot="start">
+              <ion-img [src]="userData[0].photoUrl"></ion-img>
+              <ion-text>{{userData}}</ion-text>
+            </ion-avatar>
+          </div>
+          <div *ngIf="!validation">
+            <ion-avatar slot="start">
+              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-avatar>
+          </div> 
+          <ion-label>
+            <ion-label>
+              <ion-title style="text-align: center;">Score</ion-title>
+            </ion-label>
+            <ion-progress-bar value="0.5" color="secondary" style="margin-top: 10px;"></ion-progress-bar>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-toolbar>
+        <h2>Treellenges</h2>
+      </ion-toolbar>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val of data">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val.imgURL"></ion-img>
+                <ion-text>
+                  <p>
+                    {{val.description}}
+                  </p>
+                </ion-text>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row>
+      <ion-toolbar>
+        <h2>Treetips</h2>
+      </ion-toolbar>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val1 of data1">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val1.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val1.imgURL"></ion-img>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-
-
-
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

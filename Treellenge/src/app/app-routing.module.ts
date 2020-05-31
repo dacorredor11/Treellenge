@@ -23,9 +23,17 @@ const routes: Routes = [
     path: 'donations',
     loadChildren: () => import('./donations/donations.module').then( m => m.DonationsPageModule)
   },
-
+  {
+    path: 'check-my-tree',
+    loadChildren: () => import('./check-my-tree/check-my-tree.module').then( m => m.CheckMyTreePageModule)
+  },
+  {
+    path: 'daily-challenge',
+    loadChildren: () => import('./daily-challenge/daily-challenge.module').then( m => m.DailyChallengePageModule)
+  },
 
 ];
+
 
 @NgModule({
   imports: [

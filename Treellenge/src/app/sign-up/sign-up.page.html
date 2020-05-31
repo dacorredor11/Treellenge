@@ -1,19 +1,47 @@
 <ion-content>
-  <ion-row style="margin-top: 30vh;">
-    <ion-col>
-      <img src="../../assets/img/logosvg.svg" height="300px" class="treellenge-icon">
-    </ion-col>
-  </ion-row>
-  <ion-footer class="ion-no-border">
-    <ion-row>
-      <ion-col>
-        <ion-button style="margin-left: 32px; margin-right: 32px;" expand="block" size="large" class="ion-margin-top">Loging</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button style="margin-left: 32px; margin-right: 32px; color: white !important;" expand="block" size="large" class="ion-margin-top" fill="outline">Register</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-footer>
+
+
+  <ion-slides pager="true">
+    
+    <ion-slide *ngFor="let slide of slides">
+
+      <div class="slide-img-padding">
+        <img [src]="slide.img">
+      </div>
+      <div>
+        <h3>{{ slide.title }}</h3>  
+      </div>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row style="margin-top: 30vh;">
+        <ion-col>
+          <img src="../../assets/img/logosvg.svg" height="300px" class="treellenge-icon">
+        </ion-col>
+      </ion-row>
+      <ion-footer class="ion-no-border">
+        <ion-grid fixed>
+          <form>
+            <ion-row>
+              <ion-col size="10">
+                <ion-button type="submit" (click)="authService.GoogleAuth()" style="margin-left: 32px; margin-right: 32px;"
+                  expand="block" size="large" class="ion-margin-top icon-left logo-google">
+                  Sign In with Google
+                </ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-text-center">
+                <ion-router-link color="white" [routerLink]="['/home']">Continue without login</ion-router-link>
+              </ion-col>
+            </ion-row>
+          </form>
+
+        </ion-grid>
+
+      </ion-footer>
+      
+    </ion-slide>
+  </ion-slides>
 </ion-content>

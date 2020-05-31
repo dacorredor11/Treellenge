@@ -1,10 +1,25 @@
 ion-content{
-    --ion-background-color:#00b75f;
+  --ion-background-color:grey;
 }
 
 .treellenge-icon{
-  height: 35vh;
-  width: auto;
-  margin: auto;
-  display: block;
+height: 35vh;
+width: auto;
+margin: auto;
+display: block;
+}
+
+ion-slide {
+display: block;
+color: black;
+}
+
+.slide-img-padding {
+padding: 35px;
+}
+
+h3 {
+font-size: 30px;
+font-weight: lighter;
+margin-bottom: 60px;
 }
