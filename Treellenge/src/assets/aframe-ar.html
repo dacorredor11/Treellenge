@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+    <!-- define your obj asset -->
+    <a-assets>
+      <a-asset-item id="tree-obj" src="3d_models/tree_lvl_1.obj"></a-asset-item>
+      <a-asset-item id="tree-mtl" src="3d_models/tree_lvl_1.mtl"></a-asset-item>
+    </a-assets>
+    <!-- use your obj model -->
+    <a-marker preset="kanji">
+      <a-text position="0 -5 0" rotation="270 90 -90" opacity="0.5" color="#00b75f" value="Thank you!"></a-text>
+      <a-entity position="0 -5 0" rotation="270 90 -90" scale="0.3 0.3 0.3" obj-model="mtl: #tree-mtl; obj: #tree-obj"></a-entity>
+    </a-marker>
+    </a-scene>
+  </body>
+</html>
+
+<style>
+  #arjsDebugUIContainer {
+    visibility: hidden;
+  }
+  </style>
