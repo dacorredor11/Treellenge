@@ -1,0 +1,48 @@
+<ion-content class="ion-no-padding">
+  <ion-toolbar>
+    <h2 class="ion-text-center">{{userData.displayName}}</h2>
+  </ion-toolbar>
+  <ion-item>
+    <ion-avatar slot="start" >
+      <ion-img class="avatar" [src]="userData.photoURL"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <ion-label>
+        <ion-title style="text-align: center;">Score</ion-title>
+      </ion-label>
+      <ion-button color="success" slot="start">Follow</ion-button>
+      <ion-progress-bar value="0.5" color="secondary" style="margin-top: 10px;"></ion-progress-bar>
+    </ion-label>
+
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <h2>My challenges</h2>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let val of data">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{val.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <ion-img [src]="val.imgURL"></ion-img>
+                <ion-text>
+                  <p>
+                    {{val.description}}
+                  </p>
+                </ion-text>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

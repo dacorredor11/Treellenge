@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../shared/authentication-service'
-import { User } from '../shared/user.model'
+
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-user',
+  templateUrl: './user.page.html',
+  styleUrls: ['./user.page.scss'],
 })
-export class HomePage {
+export class UserPage implements OnInit {
 
   validation = false
   userData: any
+
   private data = [
     {
       id: '1',
@@ -32,26 +33,8 @@ export class HomePage {
     },
   ];
 
-  private data1 = [
-    {
-      id: '1',
-      title: 'First tip',
-      imgURL: 'assets/img/TIP1.svg',
-    },
-    {
-      id: '2',
-      title: 'Second tip',
-      imgURL: 'assets/img/TIP2.svg',
-    },
-    {
-      id: '3',
-      title: 'Third tip',
-      imgURL: 'assets/img/TIP3.svg',
-    },
-  ];
-
   constructor(public auth: AuthenticationService) { }
-  
+
   ngOnInit() {
 
     if (this.auth.isLoggedIn) {
@@ -60,18 +43,12 @@ export class HomePage {
       console.log(this.userData)
     }
 
-  }
+   
 
-  bringData() {
-    this.userData = JSON.parse(localStorage.getItem('user'));;
-    console.log(this.userData)
   }
 
   public getData() {
     return this.data;
   } 
 
-  public getData1() {
-    return this.data1;
-  } 
 }

@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'daily-challenge',
     loadChildren: () => import('./daily-challenge/daily-challenge.module').then( m => m.DailyChallengePageModule)
+  },  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
+
 
 ];
 
