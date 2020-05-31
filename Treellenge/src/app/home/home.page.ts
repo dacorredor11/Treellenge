@@ -11,9 +11,6 @@ export class HomePage {
 
   validation = false
   userData: any
-
-
-
   private data = [
     {
       id: '1',
