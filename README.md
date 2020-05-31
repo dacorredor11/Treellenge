@@ -7,7 +7,7 @@ como la reforestación después de quemas, y la limpieza de ríos.
 ![enter image description here](https://i.ibb.co/sKmvZdG/Fly-Converted.gif)
 
 
-![enter image description here](https://i.ibb.co/r5tQ4Mp/ezgif-2-a77a30a22485.gif)
+![enter image description here](https://ibb.co/5s91Bvj)
 
 # Installation
 
